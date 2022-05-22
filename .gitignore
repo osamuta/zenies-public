@@ -1,0 +1,8 @@
+/target
+/zenies
+/output
+/old
+/theory
+/tools
+Dockerfile
+mongodb*

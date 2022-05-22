@@ -1,0 +1,45 @@
+[package]
+name = "liquid_loggerd"
+version = "0.2.2"
+edition = "2018"
+description = "liquid market logger daemon."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.19"
+
+#systemd
+libsystemd = "0.5.0"
+
+# logging
+log = "0.4"
+systemd-journal-logger = "0.5.0"
+
+# loading config
+dotenv = "0.15"
+
+# locking file 
+fs2 = "0.4"
+
+# async runtime
+tokio = { version = "1.3.0", features = ["full"] }
+futures = "0.3.13"
+
+# database
+mongodb = "2.1.0"
+
+# handling arguments
+clap = "3.0.14"
+
+# json
+serde_json = "1.0"
+
+# terminal
+console = "0.15.0"
+
+# My crates
+common = { path = "../common" }
+ipc = { path = "../ipc"}
+liquid = { path = "../liquid" }
+database = { path = "../database" }

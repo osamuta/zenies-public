@@ -1,0 +1,18 @@
+[Unit]
+Description=market_viewer
+After=network-online.target
+Wants=network-online.target
+Requires=network-online.target
+
+[Service]
+Type=notify
+PIDFile=
+ExecStart=/home/shuta/zenies/bin/market_viewer start ./market_viewer.toml
+ExecStop=/home/shuta/zenies/bin/market_viewer shutdown
+#Restart=always
+WatchdogSec=600
+WorkingDirectory=/home/shuta/zenies/
+
+[Install]
+WantedBy=multi-user.target
+#RequiredBy=mongd.service

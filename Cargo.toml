@@ -1,0 +1,27 @@
+[workspace]
+members = [
+    "src/liquid",
+    "src/ipc",
+    "src/common",
+    "src/market_viewer",
+    "src/database",
+    "src/data_transferer",
+    "src/data_picker",
+    "src/liquid_loggerd",
+    "src/evaluate_database",
+    "src/stats",
+    "src/market_maker"]
+
+default-members = [
+    "src/liquid",
+    "src/ipc",
+    "src/common",
+#    "src/market_viewer",
+    "src/database",
+#    "src/data_transferer",
+    "src/liquid_loggerd",
+#    "src/data_picker",
+#   "src/evaluate_database",
+    "src/stats",
+    "src/market_maker"]
+

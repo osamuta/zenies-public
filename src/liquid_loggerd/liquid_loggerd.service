@@ -1,0 +1,18 @@
+[Unit]
+Description=liquid market logger daemon
+After=network-online.target mongod.service
+Wants=network-online.target
+Requires=mongod.service
+
+[Service]
+Type=notify
+PIDFile=
+ExecStart=/working_dir/liquid_loggerd start
+ExecStop=/working_dir/liquid_loggerd shutdown
+Restart=always
+WatchdogSec=60
+WorkingDirectory=/working_dir
+
+[Install]
+WantedBy=multi-user.target
+RequiredBy=mongd.service

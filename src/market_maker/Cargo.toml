@@ -1,0 +1,57 @@
+[package]
+name = "market_maker"
+version = "0.3.0"
+edition = "2021"
+description = "market maker program. This program is required systemd to run!"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4"
+serde = "1.0"
+toml = "0.5"
+csv = "1.1"
+
+#systemd
+libsystemd = "0.5"
+
+# logging
+log = "0.4"
+systemd-journal-logger = "0.5"
+
+# locking file 
+fs2 = "0.4"
+
+# async runtime
+tokio = { version = "1.18", features = ["full"] }
+futures = "0.3"
+
+# database
+mongodb = "2.1.0"
+
+# handling arguments
+clap = "3.1"
+
+# json
+serde_json = "1.0"
+
+# terminal
+console = "0.15"
+
+# linear algebra
+ndarray = {version = "0.15", features = ["blas", "serde"]}
+ndarray-linalg = { version = "0.14", features = ["openblas-system"] }
+
+# useful iterator
+itertools = "0.10"
+rayon = "1.5"
+
+# stats
+statrs = "0.15"
+
+# My crates
+common = { path = "../common" }
+ipc = { path = "../ipc"}
+liquid = { path = "../liquid" }
+database = { path = "../database" }
+stats = { path = "../stats" }
